@@ -46,8 +46,9 @@ public class Jurusan {
         System.out.println("Kode Jurusan\t: "+ getKodeJurusan());
         System.out.println("List Mahasiswa\t: ");
         for (Mahasiswa mahasiswa : mahasiswaList){
-            System.out.println("- Nama\t: "+ mahasiswa.getNama()+
-                    " \t- Nim\t: "+mahasiswa.getNim());
+            System.out.println("- Nama\t: " + mahasiswa.getNama());
+            System.out.println("- Nim\t: " + mahasiswa.getNim());
+            System.out.println();
         }
     }
 }
