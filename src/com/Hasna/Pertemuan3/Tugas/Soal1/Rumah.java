@@ -25,4 +25,5 @@ public class Rumah {
     public int getJumlahOrang() {
         return jumlahOrang;
     }
+
 }

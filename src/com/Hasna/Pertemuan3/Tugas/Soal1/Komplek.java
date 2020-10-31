@@ -8,7 +8,7 @@ public class Komplek {
     private String idKomplek;
     private String namaKomplek;
     private int jmlRumah;
-    private List<Rumah> idRumah = new ArrayList<>();
+    private List<String> idRumah = new ArrayList<>();
 
     //constractor
     public Komplek(String idKomplek, String namaKomplek) {
@@ -17,8 +17,9 @@ public class Komplek {
     }
 
     //method untuk menambahkan data rumah
-    public void addRumah(Rumah rumah) {
-        idRumah.add(rumah);
+    public void addRumah(String idRumah) {
+        this.idRumah.add(jmlRumah, idRumah);
+        jmlRumah++;
     }
 
     //Getter & Setter
@@ -46,11 +47,13 @@ public class Komplek {
         this.jmlRumah = jmlRumah;
     }
 
-    public List<Rumah> getIdRumah() {
-        return idRumah;
+    public void getIdRumah() {
+        for (String x : idRumah) {
+            System.out.println("ID Rumah\t\t: " + x);
+        }
     }
 
-    public void setIdRumah(List<Rumah> idRumah) {
+    public void setIdRumah(List<String> idRumah) {
         this.idRumah = idRumah;
     }
 
@@ -61,13 +64,7 @@ public class Komplek {
         System.out.println("ID Komplek\t\t: " + getIdKomplek());
         System.out.println("Jumlah Rumah\t: " + getJmlRumah());
         System.out.println("\n\tLIST RUMAH\t:");
-        for (Rumah rumah : idRumah) {
-            System.out.println("ID Rumah\t\t: " + rumah.getIdRumah());
-            System.out.println("Pemilik Rumah\t: " + rumah.getPemilikRumah());
-            System.out.println("Jumlah Orang\t: " + rumah.getJumlahOrang());
-            System.out.println();
-        }
-
+        getIdRumah();
     }
 
 
