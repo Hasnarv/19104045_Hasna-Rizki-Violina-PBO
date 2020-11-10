@@ -52,7 +52,7 @@ public class Pelanggan {
             System.out.println(e);
         }
     }
-    
+
     public static int getPengunjung() {
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
