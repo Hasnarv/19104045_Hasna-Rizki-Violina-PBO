@@ -22,7 +22,6 @@ class predikatNilai {
         } else {
             predikat = null;
         }
-
         console.log(this.nama + ", kamu mendapatkan predikat " + predikat);
     }
 }
